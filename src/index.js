@@ -1,38 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-//import registerServiceWorker from './registerServiceWorker';
-//<ul className={"menu_list"}>
-//                     <li>Home</li>
-//                     <li>Moments</li>
-//                     <li>Notifications</li>
-//                     <li>Messages</li>
-//                 </ul>
+
 function Nav() {
     return (
         <div className="nav_bar">
-            <div id={"left-part"} className={"menu1"}>
-                Home
+            <div className="width">
+                <a href="#"><i className="fas fa-home"> </i> Home</a>
+                <a href="#"><i className="fas fa-bolt"> </i> Moments</a>
+                <a href="#"><i className="far fa-bell"> </i> Notifications</a>
+                <a href="#"><i className="far fa-envelope"> </i> Messages</a>
+                <span id="tw_logo"><i className="fab fa-twitter"> </i></span>
+                <button className="dweet_btn float-right">Dweet</button>
+                <img src="./avatar.png" className="pic float-right"/>
+                <img className="small-icon float-right" src="./search.svg"/>
+                <input className="search float-right" type="text" placeholder="Search devine"/>
             </div>
-            <div id={"left-part"} className={"menu2"}>
-                Moments
-            </div>
-            <div id={"left-part"} className={"menu3"}>
-                Notifications
-            </div>
-            <div id={"left-part"} className={"menu4"}>
-                Messages
-            </div>
-
-            <div id={"logo"} className={'logo'}><img id={"tw_logo"} src={"./tw_logo.svg"} alt={"img"}/></div>
-                <div className={"search_bar"}>
-                    <input className={"search"} type={"text"} placeholder={"Search"}/>
-                </div>
-
-            <div className={"user_photo"}><span>Pic</span></div>
-            <div className={"post"}><span>Post</span></div>
         </div>
-
     );
 
 
@@ -40,15 +24,13 @@ function Nav() {
 
 class App extends React.Component {
     render() {
-
         return (
             <Nav/>
         );
-
     }
 }
 
 
-ReactDOM.render(<App/>, document.getElementById('root'));
-
-//registerServiceWorker();
+ReactDOM.render(
+    <App/>
+    , document.getElementById('root'));
