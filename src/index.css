@@ -1,0 +1,74 @@
+body,html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.nav_bar{
+
+  display:grid;
+  grid-template-columns:repeat(6,1fr) repeat(4,1fr) 1fr ;
+  grid-template-rows: auto;
+  grid-template-areas:
+   ". menua menub menuc menud logo .  search pic tweet_btn ."
+   ;
+  padding: 10px 10px;
+  background:#fff;
+
+}
+.menu1{
+  grid-column: menua;
+}.menu2{
+  grid-column: menub;
+}.menu3{
+  grid-column: menuc;
+}.menu4{
+  grid-column: menud;
+}
+
+#tw_logo {
+  width: 100%;
+  height: 46px;
+}
+
+.menu > div {
+  float: left;
+  padding: 1rem;
+}
+
+.menu_list{
+  display:flex;
+  grid-column: menu;
+
+}
+ul{
+  list-style: none;
+}
+
+
+.logo{
+  grid-column: logo;
+}
+.search_bar{
+  padding:2px;
+  grid-column: search;
+}
+.search{
+  border-radius:2rem;
+  text-align:left;
+  border: 1px solid #ccc;
+  padding: 0.3rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search:focus {
+  outline: none;
+  border-color: mediumpurple;
+}
+.user_photo{
+  grid-column: pic;
+}
+.post{
+  grid-column: tweet_btn;
+}
